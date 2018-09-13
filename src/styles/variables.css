@@ -1,0 +1,38 @@
+/* Colors */
+
+.bg-primary {
+    background-color: #5B2E90;
+}
+
+.bg-primary-b {
+    background-color: #2C004B;
+}
+
+.bg-secondary {
+    background-color: #FFB200;
+}
+
+.bg-secondary-b {
+    background-color: #FF9200;
+}
+
+.bg-dark {
+    background-color: #000000;
+}
+
+.bg-light {
+    background-color: #FFFFFF;
+}
+
+.primary-text { color: #5B2E90; }
+
+.royal { background-color: #5B2E90 !important; }
+
+.royal-outline {
+    border: 2px solid #5B2E90;
+}
+
+.collection .collection-item.avatar i.circle.royal-outline {
+    color: #5B2E90;
+    background: transparent !important;
+}

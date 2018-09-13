@@ -18,10 +18,14 @@ import { CustomCurrencyMaskConfig, NgbDateParserFormatterPtBr } from 'linx-dms-a
 
 /* Components */
 import { AppComponent } from './app.component';
+import { MainComponent } from './main/main.component';
+import { ModalComponent } from './modal/modal.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    MainComponent,
+    ModalComponent
   ],
   imports: [
     BrowserModule,

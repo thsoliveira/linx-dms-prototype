@@ -18,13 +18,17 @@ import { CustomCurrencyMaskConfig, NgbDateParserFormatterPtBr } from 'linx-dms-a
 
 /* Components */
 import { AppComponent } from './app.component';
-import { MainComponent } from './main/main.component';
+import { AppRoutingModule } from './/app-routing.module';
+import { HomeComponent } from './pages/home/home.component';
+import { AboutComponent } from './pages/about/about.component';
+import { Error404Component } from './pages/error404/error404.component';
 import { ModalComponent } from './modal/modal.component';
-
 @NgModule({
   declarations: [
     AppComponent,
-    MainComponent,
+    HomeComponent,
+    AboutComponent,
+    Error404Component,
     ModalComponent
   ],
   imports: [

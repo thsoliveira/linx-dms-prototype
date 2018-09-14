@@ -1,6 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { Router } from '@angular/router';
+
 
 /* NPM packages */
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
@@ -18,7 +20,7 @@ import { CustomCurrencyMaskConfig, NgbDateParserFormatterPtBr } from 'linx-dms-a
 
 /* Components */
 import { AppComponent } from './app.component';
-import { AppRoutingModule } from './/app-routing.module';
+import { AppRoutingModule } from './app-routing.module';
 import { HomeComponent } from './pages/home/home.component';
 import { AboutComponent } from './pages/about/about.component';
 import { Error404Component } from './pages/error404/error404.component';
@@ -43,7 +45,8 @@ import { ModalComponent } from './modal/modal.component';
     NgbModule.forRoot(),
     NgSelectModule,
     AngularFontAwesomeModule,
-    ToasterModule.forRoot()
+    ToasterModule.forRoot(),
+    AppRoutingModule
   ],
   providers: [
     { provide: CURRENCY_MASK_CONFIG, useValue: CustomCurrencyMaskConfig },
@@ -52,4 +55,4 @@ import { ModalComponent } from './modal/modal.component';
   ],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}

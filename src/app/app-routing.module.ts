@@ -22,6 +22,10 @@ const appRoutes: Routes = [
         path: 'content',
         component: ModalContentComponent,
         /* loadChildren: './modal/modal-content/modal-content.component.html' */
+      },
+      {
+        path: 'about',
+        component: AboutComponent,
       }
     ]
   },

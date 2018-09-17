@@ -18,7 +18,8 @@ import { CustomCurrencyMaskConfig, NgbDateParserFormatterPtBr } from 'linx-dms-a
 
 /* Components */
 import { AppComponent } from './app.component';
-import { LinxDmsPrototypeProjectModule } from 'projects/linx-dms-prototype-project/src/public_api';
+import { LinxDmsLibModule } from 'linx-dms-lib';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -35,8 +36,7 @@ import { LinxDmsPrototypeProjectModule } from 'projects/linx-dms-prototype-proje
     NgSelectModule,
     AngularFontAwesomeModule,
     ToasterModule.forRoot(),
-
-    LinxDmsPrototypeProjectModule
+    LinxDmsLibModule
   ],
   providers: [
     { provide: CURRENCY_MASK_CONFIG, useValue: CustomCurrencyMaskConfig },

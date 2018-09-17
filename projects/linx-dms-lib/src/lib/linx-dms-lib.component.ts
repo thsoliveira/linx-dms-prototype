@@ -1,15 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'enl-linx-dms-prototype-project',
+  selector: 'lib-linx-dms-lib',
   template: `
     <p>
-      linx-dms-prototype-project works!
+      linx-dms-lib works!
     </p>
   `,
   styles: []
 })
-export class LinxDmsPrototypeProjectComponent implements OnInit {
+export class LinxDmsLibComponent implements OnInit {
 
   constructor() { }
 

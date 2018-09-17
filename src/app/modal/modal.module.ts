@@ -5,6 +5,7 @@ import { FormsModule } from '@angular/forms';
 
 import { ModalRoutingModule } from './modal-routing.module';
 import { ModalComponent } from './modal.component';
+import { ModalContentComponent } from './modal-content/modal-content.component';
 
 
 
@@ -15,7 +16,8 @@ import { ModalComponent } from './modal.component';
         ModalRoutingModule
     ],
     declarations: [
-        ModalComponent
+        ModalComponent,
+        ModalContentComponent
     ],
 })
-export class HeroesModule { }
+export class ModalModule { }

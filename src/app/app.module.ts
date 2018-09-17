@@ -24,17 +24,19 @@ import { AppRoutingModule } from './app-routing.module';
 import { HomeComponent } from './pages/home/home.component';
 import { AboutComponent } from './pages/about/about.component';
 import { Error404Component } from './pages/error404/error404.component';
-import { ModalComponent } from './modal/modal.component';
-import { ModalContentComponent } from './modal/modal-content/modal-content.component';
+/* import { ModalComponent } from './modal/modal.component'; */
+/* import { ModalContentComponent } from './modal/modal-content/modal-content.component'; */
 import { ModalRoutingModule } from './modal/modal-routing.module';
+import { ContentComponent } from './pages/content/content.component';
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     AboutComponent,
     Error404Component,
-    ModalComponent,
-    ModalContentComponent
+    /* ModalComponent, */
+    /* ModalContentComponent, */
+    ContentComponent
   ],
   imports: [
     BrowserModule,

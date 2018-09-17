@@ -3,19 +3,30 @@ import { RouterModule, Routes } from '@angular/router';
 import { AboutComponent } from '../pages/about/about.component';
 import { Error404Component } from '../pages/error404/error404.component';
 import { ModalContentComponent } from './modal-content/modal-content.component';
+import { ModalComponent } from './modal.component';
 
-// const routes: Routes = [
-//   { path: 'modal', component: ModalComponent },
-//   { path: 'about/:id', component: AboutComponent },
-//   { path: '', redirectTo: '/modal', pathMatch: 'full' },
-//   { path: '**', component: Error404Component }
-// ];
+
 
 const modalRoutes: Routes = [
-    { path: 'about', component: AboutComponent },
-    { path: 'content', component: ModalContentComponent },
-    { path: '', redirectTo: '/about', pathMatch: 'full'},
-    { path: '**', component: Error404Component}
+    {
+        path: '',
+        component: ModalComponent,
+        children: [
+            {
+                path: '',
+                children: [
+                    {
+                        path: '',
+                        component: ModalContentComponent
+                    }
+                ]
+            }
+        ]
+    }
+    /* { path: 'about', component: AboutComponent },
+    { path: 'content', component: ModalContentComponent }, */
+    /* { path: '', redirectTo: '/about', pathMatch: 'full'}, */
+    /* { path: '**', component: Error404Component} */
 ];
 @NgModule({
     imports: [RouterModule.forChild(modalRoutes)],

@@ -3,8 +3,9 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './pages/home/home.component';
 import { AboutComponent } from './pages/about/about.component';
 import { Error404Component } from './pages/error404/error404.component';
-import { ModalComponent } from './modal/modal.component';
-import { ModalContentComponent } from './modal/modal-content/modal-content.component';
+/* import { ModalComponent } from './modal/modal.component';
+import { ModalContentComponent } from './modal/modal-content/modal-content.component'; */
+import { ContentComponent } from './pages/content/content.component';
 
 // const routes: Routes = [
 //   { path: 'modal', component: ModalComponent },
@@ -16,23 +17,58 @@ import { ModalContentComponent } from './modal/modal-content/modal-content.compo
 const appRoutes: Routes = [
   {
     path: 'modal',
-    component: ModalComponent,
-    children: [
+    /* component: ModalComponent, */
+    loadChildren: './modal/modal.module#ModalModule',
+    /* children: [
       {
         path: 'content',
         component: ModalContentComponent,
-        /* loadChildren: './modal/modal-content/modal-content.component.html' */
+        loadChildren: '.modal/modal.module#ModalModule'
       },
       {
         path: 'about',
         component: AboutComponent,
+        children: [
+          {
+            path: 'contentPages',
+            component: ContentComponent
+          }
+        ]
+      }
+    ] */
+  },
+  {
+    path: 'about',
+    component: AboutComponent,
+    children: [
+      {
+        path: 'contentPages',
+        component: ContentComponent
       }
     ]
   },
+  {
+    path: 'home',
+    component: HomeComponent
+  },
+  {
+    path: '',
+    redirectTo: '/',
+    pathMatch: 'full'
+  }
   /* { path: 'about', component: AboutComponent } */
 ];
 @NgModule({
-  exports: [RouterModule],
-  imports: [RouterModule.forRoot(appRoutes)]
+  exports: [
+    RouterModule
+  ],
+  imports: [
+    RouterModule.forRoot(
+      appRoutes,
+      {
+        enableTracing: true, // debugging
+      }
+    )
+  ],
 })
 export class AppRoutingModule { }

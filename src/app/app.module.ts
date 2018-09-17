@@ -36,7 +36,8 @@ import { LinxDmsLibModule } from 'linx-dms-lib';
     NgSelectModule,
     AngularFontAwesomeModule,
     ToasterModule.forRoot(),
-    LinxDmsLibModule
+    LinxDmsLibModule,
+    /* RouterModule */
   ],
   providers: [
     { provide: CURRENCY_MASK_CONFIG, useValue: CustomCurrencyMaskConfig },

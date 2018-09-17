@@ -36,7 +36,7 @@ const pagesRoutes: Routes = [
 ];
 @NgModule({
     imports: [
-        RouterModule.forChild(pagesRoutes)
+        RouterModule.forRoot(pagesRoutes)
     ],
     exports: [
         RouterModule

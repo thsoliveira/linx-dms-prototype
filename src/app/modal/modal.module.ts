@@ -6,6 +6,8 @@ import { FormsModule } from '@angular/forms';
 import { ModalRoutingModule } from './modal-routing.module';
 import { ModalComponent } from './modal.component';
 import { ModalContentComponent } from './modal-content/modal-content.component';
+import { ContentComponent } from '../pages/content/content.component';
+import { AboutComponent } from '../pages/about/about.component';
 
 
 
@@ -17,7 +19,9 @@ import { ModalContentComponent } from './modal-content/modal-content.component';
     ],
     declarations: [
         ModalComponent,
-        ModalContentComponent
+        ModalContentComponent,
+        ContentComponent,
+        AboutComponent
     ],
 })
 export class ModalModule { }

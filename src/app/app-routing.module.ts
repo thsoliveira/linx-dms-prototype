@@ -17,35 +17,7 @@ import { ContentComponent } from './pages/content/content.component';
 const appRoutes: Routes = [
   {
     path: 'modal',
-    /* component: ModalComponent, */
     loadChildren: './modal/modal.module#ModalModule',
-    /* children: [
-      {
-        path: 'content',
-        component: ModalContentComponent,
-        loadChildren: '.modal/modal.module#ModalModule'
-      },
-      {
-        path: 'about',
-        component: AboutComponent,
-        children: [
-          {
-            path: 'contentPages',
-            component: ContentComponent
-          }
-        ]
-      }
-    ] */
-  },
-  {
-    path: 'about',
-    component: AboutComponent,
-    children: [
-      {
-        path: 'contentPages',
-        component: ContentComponent
-      }
-    ]
   },
   {
     path: 'home',
@@ -56,7 +28,6 @@ const appRoutes: Routes = [
     redirectTo: '/',
     pathMatch: 'full'
   }
-  /* { path: 'about', component: AboutComponent } */
 ];
 @NgModule({
   exports: [

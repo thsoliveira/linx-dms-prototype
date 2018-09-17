@@ -4,6 +4,7 @@ import { AboutComponent } from '../pages/about/about.component';
 import { Error404Component } from '../pages/error404/error404.component';
 import { ModalContentComponent } from './modal-content/modal-content.component';
 import { ModalComponent } from './modal.component';
+import { ContentComponent } from '../pages/content/content.component';
 
 
 
@@ -17,7 +18,19 @@ const modalRoutes: Routes = [
                 children: [
                     {
                         path: '',
-                        component: ModalContentComponent
+                        component: ModalContentComponent,
+                        children: [
+                            {
+                                path: 'about',
+                                component: AboutComponent
+                            },
+                            {
+                                path: 'content',
+                                component: ContentComponent,
+                                /* loadChildren: './pages/content.module#PagesContentModule' */
+                                /* loadChildren: './modal/modal.module#ModalModule', */
+                            }
+                        ]
                     }
                 ]
             }
@@ -29,7 +42,11 @@ const modalRoutes: Routes = [
     /* { path: '**', component: Error404Component} */
 ];
 @NgModule({
-    imports: [RouterModule.forChild(modalRoutes)],
-    exports: [RouterModule]
+    imports: [
+        RouterModule.forChild(modalRoutes)
+    ],
+    exports: [
+        RouterModule
+    ]
 })
 export class ModalRoutingModule { }

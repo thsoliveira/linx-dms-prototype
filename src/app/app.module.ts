@@ -32,11 +32,11 @@ import { ContentComponent } from './pages/content/content.component';
   declarations: [
     AppComponent,
     HomeComponent,
-    AboutComponent,
+    /* AboutComponent, */
     Error404Component,
     /* ModalComponent, */
     /* ModalContentComponent, */
-    ContentComponent
+    /* ContentComponent */
   ],
   imports: [
     BrowserModule,

@@ -2,11 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'lib-linx-dms-lib',
-  template: `
-    <p>
-      linx-dms-lib works!
-    </p>
-  `,
+  templateUrl: './linx-dms-lib.component.html',
   styles: []
 })
 export class LinxDmsLibComponent implements OnInit {

@@ -1,3 +1,13 @@
-<p>lib-html wrks</p>
-<a routerLink="/modal">Modal</a>
-<router-outlet></router-outlet>
+<div class="container">
+    <div class="row">
+        <div class="col-6">
+            <p>Modal</p>
+            <button type="button" class="btn btn-primary" routerLink="/modal">Modal</button>
+        </div>
+        <div class="col-6">
+            <p> Pages </p>
+            <button type="button" class="btn btn-primary" routerLink="/pages">Pages</button>
+        </div>
+        <router-outlet></router-outlet>
+    </div>
+</div>

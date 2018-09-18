@@ -6,13 +6,13 @@ import { ContentComponent } from './content/content.component';
 const modalRoutes: Routes = [
     {
         path: 'modal',
-        component: ModalComponent
-        // children: [
-        //     {
-        //         path: 'content',
-        //         component: ContentComponent
-        //     }
-        // ]
+        component: ModalComponent,
+        children: [
+            {
+                path: 'content',
+                component: ContentComponent
+            }
+        ]
     }
     /* { path: 'about', component: AboutComponent },
     { path: 'content', component: ModalContentComponent }, */

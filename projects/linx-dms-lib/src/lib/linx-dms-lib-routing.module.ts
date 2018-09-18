@@ -5,13 +5,17 @@ import { ModalComponent } from './modal/modal.component';
 
 const libRoutes: Routes = [
   {
-    path:'lib',
+    path: 'lib',
     component: LinxDmsLibComponent,
     children: [
       {
-        path:'modal',
-        loadChildren:'./modal/modal.module#ModalModule'
-      }
+        path: 'modal',
+        loadChildren: './modal/modal.module#ModalModule'
+      },
+      {
+        path: 'pages',
+        loadChildren: './pages/pages.module#PagesModule'
+      },
     ]
   },
   {

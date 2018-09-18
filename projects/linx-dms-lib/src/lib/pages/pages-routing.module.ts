@@ -7,32 +7,9 @@ import { PageThreeComponent } from './page-three/page-three.component';
 
 const pagesRoutes: Routes = [
     {
-        path: '',
+        path: 'pages',
         component: PagesComponent,
-        children: [
-            {
-                path: '',
-                children: [
-                    {
-                        path: 'pageOne',
-                        component: PageOneComponent
-                    },
-                    {
-                        path: 'pageTwo',
-                        component: PageTwoComponent
-                    },
-                    {
-                        path: 'pageThree',
-                        component: PageThreeComponent
-                    }
-                ]
-            }
-        ]
     }
-    /* { path: 'about', component: AboutComponent },
-    { path: 'content', component: ModalContentComponent }, */
-    /* { path: '', redirectTo: '/about', pathMatch: 'full'}, */
-    /* { path: '**', component: Error404Component} */
 ];
 @NgModule({
     imports: [

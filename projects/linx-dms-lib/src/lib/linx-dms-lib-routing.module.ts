@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { LinxDmsLibComponent } from './linx-dms-lib.component';
-import { ModalComponent } from './modal/modal.component';
+
 
 const libRoutes: Routes = [
   {
@@ -10,7 +10,7 @@ const libRoutes: Routes = [
     children: [
       {
         path: 'modal',
-        loadChildren: './modal/modal.module#ModalModule'
+        loadChildren: './modal/modal.module#ModalModule',
       },
       {
         path: 'pages',
@@ -22,7 +22,7 @@ const libRoutes: Routes = [
     path: '',
     redirectTo: '/lib',
     pathMatch: 'full'
-  }
+  },
 ];
 @NgModule({
   exports: [

@@ -16,7 +16,7 @@ export class ModalComponent implements OnInit {
   }
 
   redireciona() {
-      this.router.navigate(['/home']);
+      this.router.navigate(['/']);
   }
 
 }

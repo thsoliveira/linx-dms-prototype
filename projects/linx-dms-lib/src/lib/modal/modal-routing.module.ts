@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ModalComponent } from './modal.component';
 import { ContentComponent } from './content/content.component';
+import { PagesComponent } from '../pages/pages.component';
+import { PageOneComponent } from '../pages/page-one/page-one.component';
 
 const modalRoutes: Routes = [
     {
@@ -10,14 +12,16 @@ const modalRoutes: Routes = [
         children: [
             {
                 path: 'content',
-                component: ContentComponent
-            }
+                loadChildren: './content/content.module#ContentModule',
+                // component: ContentComponent,
+            },
         ]
-    }
-    /* { path: 'about', component: AboutComponent },
-    { path: 'content', component: ModalContentComponent }, */
-    /* { path: '', redirectTo: '/about', pathMatch: 'full'}, */
-    /* { path: '**', component: Error404Component} */
+    },
+    /* {
+        path: '',
+        redirectTo: './modal',
+        pathMatch: 'full'
+    } */
 ];
 @NgModule({
     imports: [
@@ -27,4 +31,5 @@ const modalRoutes: Routes = [
         RouterModule
     ]
 })
+
 export class ModalRoutingModule { }

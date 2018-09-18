@@ -1,14 +1,23 @@
-<p>
-  pages works!
-</p>
-<div class="container">
-  <div class="row">
-    <div class="col-12">
-      <a routerLink="./pageOne">PageOne</a>
-      <a routerLink="./pageTwo">PageTwo</a>
-      <a routerLink="./pageThree">PageThree</a>
-      <router-outlet></router-outlet>
+<div class="box">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <ul class="nav nav-tabs">
+          <li role="presentation" class="active">
+            <a routerLink="/">Home</a>
+          </li>
+          <li role="presentation">
+            <a routerLink="./pageOne">PageOne</a>
+          </li>
+          <li role="presentation">
+            <a routerLink="./pageTwo">PageTwo</a>
+          </li>
+          <li role="presentation">
+            <a routerLink="./pageThree">PageThree</a>
+          </li> 
+        </ul>
+      </div>
     </div>
   </div>
 </div>
-
+<router-outlet></router-outlet>

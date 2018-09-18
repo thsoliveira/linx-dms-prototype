@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'enl-page-three',
+  selector: 'lib-page-three',
   templateUrl: './page-three.component.html',
   styleUrls: ['./page-three.component.css']
 })

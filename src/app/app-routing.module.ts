@@ -14,7 +14,6 @@ const appRoutes: Routes = [
       appRoutes,
       {
         enableTracing: true, // <-- debugging purposes only
-
       }
     )
   ],
@@ -22,4 +21,5 @@ const appRoutes: Routes = [
     RouterModule
   ]
 })
+
 export class AppRoutingModule { }

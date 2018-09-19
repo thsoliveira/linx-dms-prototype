@@ -1,23 +1,23 @@
-<div class="box">
-  <div class="container">
-    <div class="row">
-      <div class="col-12">
-        <ul class="nav nav-tabs">
-          <li role="presentation" class="active">
-            <a routerLink="/">Home</a>
-          </li>
-          <li role="presentation">
-            <a routerLink="./pageOne">PageOne</a>
-          </li>
-          <li role="presentation">
-            <a routerLink="./pageTwo">PageTwo</a>
-          </li>
-          <li role="presentation">
-            <a routerLink="./pageThree">PageThree</a>
-          </li> 
-        </ul>
-      </div>
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <ul class="breadcrumb breadcrumb-primary">
+        <li role="presentation">
+          <button type="button" class="btn btn-primary" routerLink="./pageOne">PageOne</button>
+        </li>
+        <li role="presentation">
+          <button type="button" class="btn btn-primary" routerLink="./pageTwo">PageTwo</button>
+        </li>
+        <li role="presentation">
+          <button type="button" class="btn btn-primary" routerLink="./pageThree">PageThree</button>
+        </li>
+      </ul>
     </div>
   </div>
 </div>
-<router-outlet></router-outlet>
+<div class="row">
+  <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+      <router-outlet></router-outlet>
+  </div>
+</div>
+

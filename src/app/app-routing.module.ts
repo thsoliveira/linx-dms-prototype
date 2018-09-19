@@ -4,7 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 const appRoutes: Routes = [
   {
     path: 'lib',
-    loadChildren: '/dist/linx-dms-lib/src/lib/linx-dms-lib.module#LinxDmsLibModule'
+    loadChildren: './dist/linx-dms-lib/src/lib/linx-dms-lib.module#LinxDmsLibModule'
   }
 ];
 

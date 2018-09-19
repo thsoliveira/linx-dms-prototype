@@ -14,7 +14,8 @@ const contentRoutes: Routes = [
         children: [
             {
                 path: 'pages',
-                component: PagesComponent,
+                loadChildren: '../../pages/pages.module#PagesModule '
+                /* component: PagesComponent,
                 children: [
                     {
                         path: 'pageOne',
@@ -28,7 +29,7 @@ const contentRoutes: Routes = [
                         path: 'pageThree',
                         component: PageThreeComponent
                     },
-                ]
+                ] */
             },
         ]
     },

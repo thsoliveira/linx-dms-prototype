@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, Component } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ModalComponent } from './modal.component';
 import { ContentComponent } from './content/content.component';
@@ -14,6 +14,12 @@ const modalRoutes: Routes = [
                 path: 'content',
                 // loadChildren: './content/content.module#ContentModule',
                 component: ContentComponent,
+                children: [
+                    {
+                        path: 'pages',
+                        component: PagesComponent
+                    }
+                ]
             },
         ]
     },

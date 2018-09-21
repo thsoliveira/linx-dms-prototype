@@ -12,8 +12,8 @@ const modalRoutes: Routes = [
         children: [
             {
                 path: 'content',
-                loadChildren: './content/content.module#ContentModule',
-                // component: ContentComponent,
+                // loadChildren: './content/content.module#ContentModule',
+                component: ContentComponent,
             },
         ]
     },

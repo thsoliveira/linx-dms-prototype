@@ -1,7 +1,7 @@
 <!-- Modal -->
 <div class="modal" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
   aria-hidden="false" style="display: block;">
-  <div class="modal-dialog modal-dialog-centered" role="document">
+  <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
@@ -12,6 +12,10 @@
       <div class="modal-body">
         <h4> Nivel - Modal </h4>
         <div class="modal-content" style="text-align: center;">
+          <!-- <button type="button" class="btn btn-primary" (click)="showContent()"> Abrir Conteúdo </button> -->
+          <!-- <div *ngIf="activeContent">
+            <lib-content></lib-content>
+          </div> -->
           <router-outlet></router-outlet>
           <button type="button" class="btn btn-primary" routerLink="/content">Abrir Conteúdo</button>
         </div>

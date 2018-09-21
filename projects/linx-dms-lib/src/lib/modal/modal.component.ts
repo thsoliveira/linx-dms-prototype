@@ -7,16 +7,22 @@ import { Router } from '@angular/router';
   styleUrls: ['./modal.component.css']
 })
 export class ModalComponent implements OnInit {
+  activeContent: boolean;
 
-
-  constructor(private router: Router) { }
+  constructor(private router: Router) {
+    this.activeContent = false;
+  }
 
   ngOnInit() {
 
   }
 
   redireciona() {
-      this.router.navigate(['/']);
+    this.router.navigate(['/']);
+  }
+
+  showContent() {
+    this.activeContent = true;
   }
 
 }

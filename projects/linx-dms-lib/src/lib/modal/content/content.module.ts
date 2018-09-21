@@ -20,5 +20,8 @@ import { PageThreeComponent } from '../../pages/page-three/page-three.component'
     declarations: [
         ContentComponent
     ],
+    exports: [
+        ContentComponent
+    ]
 })
 export class ContentModule { }

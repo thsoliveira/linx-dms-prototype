@@ -4,6 +4,8 @@ import { ModalComponent } from './modal.component';
 import { ContentComponent } from './content/content.component';
 import { PagesComponent } from '../pages/pages.component';
 import { PageOneComponent } from '../pages/page-one/page-one.component';
+import { PageTwoComponent } from '../pages/page-two/page-two.component';
+import { PageThreeComponent } from '../pages/page-three/page-three.component';
 
 const modalRoutes: Routes = [
     {
@@ -17,7 +19,22 @@ const modalRoutes: Routes = [
                 children: [
                     {
                         path: 'pages',
-                        component: PagesComponent
+                        component: PagesComponent,
+                        // loadChildren: '../../pages/pages.module#PagesModule',
+                        children: [
+                            {
+                                path: 'pageOne',
+                                component: PageOneComponent
+                            },
+                            {
+                                path: 'pageTwo',
+                                component: PageTwoComponent
+                            },
+                            {
+                                path: 'pageThree',
+                                component: PageThreeComponent
+                            },
+                        ],
                     }
                 ]
             },

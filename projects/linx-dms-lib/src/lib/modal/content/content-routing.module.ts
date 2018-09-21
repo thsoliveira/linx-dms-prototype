@@ -11,11 +11,11 @@ const contentRoutes: Routes = [
     {
         path: 'content',
         component: ContentComponent,
-        children: [
+        /* children: [
             {
                 path: 'pages',
-                loadChildren: '../../pages/pages.module#PagesModule '
-                /* component: PagesComponent,
+                // loadChildren: '../../pages/pages.module#PagesModule ',
+                component: PagesComponent,
                 children: [
                     {
                         path: 'pageOne',
@@ -29,9 +29,9 @@ const contentRoutes: Routes = [
                         path: 'pageThree',
                         component: PageThreeComponent
                     },
-                ] */
+                ]
             },
-        ]
+        ] */
     },
     /* {
         path: '',

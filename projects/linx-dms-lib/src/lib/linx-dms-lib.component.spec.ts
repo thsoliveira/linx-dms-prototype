@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { HomeComponent } from './home.component';
+import { LinxDmsLibComponent } from './linx-dms-lib.component';
 
-describe('HomeComponent', () => {
-  let component: HomeComponent;
-  let fixture: ComponentFixture<HomeComponent>;
+describe('LinxDmsLibComponent', () => {
+  let component: LinxDmsLibComponent;
+  let fixture: ComponentFixture<LinxDmsLibComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ HomeComponent ]
+      declarations: [ LinxDmsLibComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(HomeComponent);
+    fixture = TestBed.createComponent(LinxDmsLibComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

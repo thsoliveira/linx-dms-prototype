@@ -131,6 +131,76 @@
           }
         }
       }
+    },
+    "linx-dms-prototype-project": {
+      "root": "projects/linx-dms-prototype-project",
+      "sourceRoot": "projects/linx-dms-prototype-project/src",
+      "projectType": "library",
+      "prefix": "enl",
+      "targets": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/linx-dms-prototype-project/tsconfig.lib.json",
+            "project": "projects/linx-dms-prototype-project/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/linx-dms-prototype-project/src/test.ts",
+            "tsConfig": "projects/linx-dms-prototype-project/tsconfig.spec.json",
+            "karmaConfig": "projects/linx-dms-prototype-project/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/linx-dms-prototype-project/tsconfig.lib.json",
+              "projects/linx-dms-prototype-project/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "linx-dms-lib": {
+      "root": "projects/linx-dms-lib",
+      "sourceRoot": "projects/linx-dms-lib/src",
+      "projectType": "library",
+      "prefix": "lib",
+      "targets": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/linx-dms-lib/tsconfig.lib.json",
+            "project": "projects/linx-dms-lib/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/linx-dms-lib/src/test.ts",
+            "tsConfig": "projects/linx-dms-lib/tsconfig.spec.json",
+            "karmaConfig": "projects/linx-dms-lib/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/linx-dms-lib/tsconfig.lib.json",
+              "projects/linx-dms-lib/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }
   },
   "defaultProject": "linx-dms-prototype"

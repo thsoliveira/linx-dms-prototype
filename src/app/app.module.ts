@@ -1,7 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { Router } from '@angular/router';
 
 
 /* NPM packages */
@@ -13,25 +12,18 @@ import { NgbModule, NgbDateParserFormatter } from '@ng-bootstrap/ng-bootstrap';
 import { NgSelectModule, NG_SELECT_DEFAULT_CONFIG } from '@ng-select/ng-select';
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
 import { LoadingModule } from 'ngx-loading';
-import { ModalModule } from 'ngx-modal';
 import { ChartsModule } from 'ng2-charts';
 import { ToasterModule } from 'angular2-toaster';
 import { CustomCurrencyMaskConfig, NgbDateParserFormatterPtBr } from 'linx-dms-assets';
 
 /* Components */
 import { AppComponent } from './app.component';
+import { LinxDmsLibModule } from '../../projects/linx-dms-lib/src/lib/linx-dms-lib.module';
 import { AppRoutingModule } from './app-routing.module';
-import { HomeComponent } from './pages/home/home.component';
-import { AboutComponent } from './pages/about/about.component';
-import { Error404Component } from './pages/error404/error404.component';
-import { ModalComponent } from './modal/modal.component';
+
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent,
-    AboutComponent,
-    Error404Component,
-    ModalComponent
   ],
   imports: [
     BrowserModule,
@@ -41,11 +33,11 @@ import { ModalComponent } from './modal/modal.component';
     Ng2SearchPipeModule,
     NgxCurrencyModule,
     ArchwizardModule,
-    ModalModule,
     NgbModule.forRoot(),
     NgSelectModule,
     AngularFontAwesomeModule,
     ToasterModule.forRoot(),
+    LinxDmsLibModule,
     AppRoutingModule
   ],
   providers: [

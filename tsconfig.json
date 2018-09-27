@@ -16,6 +16,20 @@
     "lib": [
       "es2017",
       "dom"
-    ]
+    ],
+    "paths": {
+      "linx-dms-prototype-project": [
+        "dist/linx-dms-prototype-project"
+      ],
+      "linx-dms-prototype-project/*": [
+        "dist/linx-dms-prototype-project/*"
+      ],
+      "linx-dms-lib": [
+        "dist/linx-dms-lib"
+      ],
+      "linx-dms-lib/*": [
+        "dist/linx-dms-lib/*"
+      ]
+    }
   }
 }

@@ -1,0 +1,31 @@
+<h1 class="form-signin-heading title">Conteúdo</h1>
+
+<div class="box">
+  <div class="row">
+    <div class="col-2">
+      <div class="modal-content" style="text-align: center;">
+        <ul class="nav flex-column nav-pills nav-stacked" role="tablist">
+          <li [ngClass]='"nav-item "+(tabOpened === "pages" ? "active" : "")' (click)="openTab('pages')">
+            <a class="nav-link" id="pages-tab" data-toogle="tab" role="tab" aria-controls="pages" aria-selected='(tabOpened === "pages")'
+              routerLink="./pages"> Pages</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="col-10">
+      <div class="modal-content" style="text-align: center;">
+        <ul class="tab-content">
+          <ul class="nav nav-tabs" role="tablist">
+            <li role="presentation" class="nav-item">
+              <div class="row">
+                <div class="col-12">
+                    <router-outlet></router-outlet>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </ul>
+      </div>
+    </div>
+    <!-- <lib-page-one></lib-page-one> -->
+  </div>
